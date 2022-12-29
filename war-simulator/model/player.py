@@ -1,4 +1,4 @@
-from battlefield import Battlefield
+from model.battlefield import Battlefield
 
 
 class Player:
@@ -6,6 +6,9 @@ class Player:
         self.id = None
         self.name = name
         self.battle_field = battle_field
+
+    def get_id(self) -> int:
+        return self.id
 
     def get_name(self) -> str:
         return self.name

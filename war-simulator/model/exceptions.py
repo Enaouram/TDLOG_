@@ -8,3 +8,8 @@ class OutOfRangeError(Exception):
 
 class DestroyedError(Exception):
     pass
+
+
+class GameFullError(Exception):
+    pass
+

@@ -1,5 +1,5 @@
-from exceptions import GameFullError
-from player import Player
+from model.exceptions import GameFullError
+from model.player import Player
 
 
 class Game:
