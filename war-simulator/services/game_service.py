@@ -94,3 +94,8 @@ class GameService:
             return "GAGNE"
         else:
             return "EN COURS"
+#J'aurais aussi pu utiliser battlefield.get_power(), c'était la fonction à utiliser pour 
+#cette fonction, mais j'ai préféré tout de même opter pour les boucles introduites.
+#Un autre point qui m'a obligé à opter pour ces boucles, est la deuxième condition 
+#pour décider si un joueur a perdu, et c'est si tout ses munitions sont perdus,
+#on n'a pas crée de fonction pour avoir une idée sur cela rapidement.
