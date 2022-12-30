@@ -6,9 +6,9 @@ from model.vessel import Vessel
 
 
 class Battlefield:
-    def __init__(self, id, min_x: int, max_x: int, min_y: int, max_y: int,
+    def __init__(self, min_x: int, max_x: int, min_y: int, max_y: int,
                  min_z: int, max_z: int, max_power: int = 22):
-        self.id = id
+        self.id = None
         self.vessels: list[Vessel] = []
         self.min_x = min_x
         self.min_y = min_y
@@ -17,9 +17,6 @@ class Battlefield:
         self.max_y = max_y
         self.max_z = max_z
         self.max_power = max_power
-
-    def get_id(self) -> int:
-        return self.id
 
     def add_vessel(self, vessel: Vessel):
         x, y, z = vessel.get_coordinates()

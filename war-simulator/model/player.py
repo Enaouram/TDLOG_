@@ -7,9 +7,6 @@ class Player:
         self.name = name
         self.battle_field = battle_field
 
-    def get_id(self) -> int:
-        return self.id
-
     def get_name(self) -> str:
         return self.name
 

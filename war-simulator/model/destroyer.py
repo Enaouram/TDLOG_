@@ -1,6 +1,6 @@
-from torpedos_launcher import TorpedoLauncher
+from model.torpedos_launcher import TorpedoLauncher
 
-from vessel import Vessel
+from model.vessel import Vessel
 
 
 class Destroyer(Vessel):

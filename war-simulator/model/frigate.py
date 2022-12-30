@@ -1,5 +1,5 @@
-from surface_missile_launcher import SurfaceMissileLauncher
-from vessel import Vessel
+from model.surface_missile_launcher import SurfaceMissileLauncher
+from model.vessel import Vessel
 
 
 class Frigate(Vessel):

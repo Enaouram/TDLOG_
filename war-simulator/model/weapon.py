@@ -2,13 +2,10 @@ from model.exceptions import NoAmmunitionError
 
 
 class Weapon:
-    def __init__(self, id, ammunitions: int, range: int):
-        self.id = id
+    def __init__(self, ammunitions: int, range: int):
+        self.id =None
         self.ammunitions = ammunitions
         self.range = range
-
-    def get_id(self) -> int:
-        return self.id
 
     def fire_at(self, x, y, z):
         if self.ammunitions == 0:
@@ -25,4 +22,4 @@ class Weapon:
         return self.range
 
     def check_target_position(self, x, y, z):
-        raise NotImplementedError("Vous n'avez pas encore choisi ma destination de votre projectile!")
+        raise NotImplementedError("Vous n'avez pas encore choisi la destination de votre projectile!")

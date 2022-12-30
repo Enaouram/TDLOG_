@@ -5,15 +5,12 @@ from model.weapon import Weapon
 
 
 class Vessel:
-    def __init__(self, id, x: float, y: float, z: float, hits: int,
+    def __init__(self, x: float, y: float, z: float, hits: int,
                  weapon: Weapon):
-        self.id = id
+        self.id = None
         self.coordinates = x, y, z
         self.hits_to_be_destroyed = hits
         self.weapon = weapon
-
-    def get_id(self) -> int:
-        return self.id
 
     def go_to(self, x, y, z):
         if self.hits_to_be_destroyed == 0:
