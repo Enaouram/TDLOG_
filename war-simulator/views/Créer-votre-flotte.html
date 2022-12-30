@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="Créer-votre-flotte.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 5.1.5, nicepage.com">
     <meta name="referrer" content="origin">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
@@ -32,7 +31,7 @@
     <meta property="og:type" content="website">
   </head>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-black u-clearfix u-header u-header" id="sec-ac78"><div class="u-clearfix u-sheet u-sheet-1">
-        <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="500" data-image-height="500">
+        <a href="http://127.0.0.1:3000/views/Home.html" class="u-image u-logo u-image-1" data-image-width="500" data-image-height="500">
           <img src="images/War_Simulator-removebg-preview.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
@@ -72,17 +71,17 @@
         <div class="u-form u-form-1">
           <form id="create-vessel-form">
             <div class="u-form-group u-form-name u-label-top">
-              <label for="name-6797" class="u-label">Ton pseudo :</label>
-              <input type="text" id="name-6797" name="player_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle" required="">
+              <label for="player-name" class="u-label">Ton pseudo :</label>
+              <input type="text" id="player-name" name="player_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle" required="">
             </div>
-            <div class="u-form-email u-form-group u-label-top">
-              <label for="email-6797" class="u-label">Identifiant de la partie</label>
-              <input type="email" id="email-6797" name="x_min" class="u-border-1 u-border-grey-30 u-input u-input-rectangle" required="">
-            </div>
-            <div class="u-form-group u-form-select u-label-top">
-              <label for="select-59f8" class="u-label">Choisir le type de vaisseau :</label>
+            
+              <label for="game-id" class="u-label">Identifiant de la partie</label>
+              <input type="number" id="game-id" name="game_id" class="u-border-1 u-border-grey-30 u-input u-input-rectangle" required="">
+            
+            
+              <label for="vessel-type" class="u-label">Choisir le type de vaisseau :</label>
               <div class="u-form-select-wrapper">
-                <select id="select-59f8" name="vessel_type" class="u-border-1 u-border-grey-30 u-input u-input-rectangle" required="required">
+                <select id="vessel-type" name="vessel_type" class="u-border-1 u-border-grey-30 u-input u-input-rectangle" required="required">
                   <option value="Cruiser">Cruiser</option>
                   <option value="Destroyer">Destroyer</option>
                   <option value="Frigate">Frigate</option>
@@ -92,29 +91,33 @@
               </div>
             </div>
             <div class="u-form-group u-form-name u-label-top">
-              <label for="name-d649" class="u-label">X :</label>
-              <input type="text" id="name-d649" name="x" class="u-border-1 u-border-grey-30 u-input u-input-rectangle" required="">
+              <label for="vessel-x" class="u-label">X :</label>
+              <input type="number" id="vessel-x" name="x" class="u-border-1 u-border-grey-30 u-input u-input-rectangle" required="">
             </div>
             <div class="u-form-group u-form-name u-label-top">
-              <label for="name-b167" class="u-label">Y :</label>
-              <input type="text" id="name-b167" name="y" class="u-border-1 u-border-grey-30 u-input u-input-rectangle" required="">
+              <label for="vessel-y" class="u-label">Y :</label>
+              <input type="number" id="vessel-y" name="y" class="u-border-1 u-border-grey-30 u-input u-input-rectangle" required="">
             </div>
             <div class="u-form-group u-form-name u-label-top">
-              <label for="name-8f8b" class="u-label">Z :</label>
-              <input type="text" id="name-8f8b" name="z" class="u-border-1 u-border-grey-30 u-input u-input-rectangle" required="">
+              <label for="vessel-z" class="u-label">Z :</label>
+              <input type="number" id="vessel-z" name="z" class="u-border-1 u-border-grey-30 u-input u-input-rectangle" required="">
             </div>
             <div class="u-align-center u-form-group u-form-submit u-label-top">
               <a href="#" class="u-btn u-btn-submit u-button-style">Valider</a>
-              <input type="submit" value="submit" class="u-form-control-hidden">
+              <input type="submit" value="Valider" class="u-form-control-hidden">
             </div>
-            <div class="u-form-send-message u-form-send-success">Thank you! Your message has been sent.</div>
-            <div class="u-form-send-error u-form-send-message">Unable to send your message. Please fix errors then try again.</div>
-            <input type="hidden" value="" name="recaptchaResponse">
-            <input type="hidden" name="formServices" value="b9b5ccfdd62dc558942347e9aed74e8c">
           </form>
         </div>
-        <a href="https://nicepage.com/templates" class="u-border-2 u-border-grey-75 u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-2">Charger ma flotte<span style="font-size: 0.875rem;"></span>
-        </a>
+        <button id="manage-fleet" class="u-border-2 u-border-grey-75 u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-2">Charger ma flotte
+
+        </button>
+        <script >
+          var button = document.getElementById('manage-fleet')
+          button.addEventListener('click', function() {
+            
+    
+  });
+        </script>
         <div class="u-table u-table-responsive u-table-1">
           <table class="u-table-entity">
             <colgroup>

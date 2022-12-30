@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="Créer-une-partie.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 5.1.5, nicepage.com">
+    <script src="create-game.js"></script>
     <meta name="referrer" content="origin">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
@@ -31,7 +31,7 @@
     <meta property="og:type" content="website">
   </head>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-black u-clearfix u-header u-header" id="sec-ac78"><div class="u-clearfix u-sheet u-sheet-1">
-        <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="500" data-image-height="500">
+        <a href="http://127.0.0.1:3000/views/Home.html" class="u-image u-logo u-image-1" data-image-width="500" data-image-height="500">
           <img src="images/War_Simulator-removebg-preview.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
@@ -66,7 +66,7 @@
           </div>
         </nav>
       </div></header>
-    <script src="scripts/create-game.js"></script>
+    
     <section class="u-align-center u-clearfix u-section-1" id="sec-0a0f">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-form u-form-1">
@@ -101,13 +101,10 @@
               <input type="number" id="max-z" name="max_z" class="u-border-1 u-border-grey-30 u-input u-input-rectangle" required value="1">
             
             
-              <a href="#" class="u-btn u-btn-submit u-button-style">Valider</a>
-              <input type="submit" value="Valider" class="u-form-control-hidden">
+              <button onclick="create_game();postData()" class="u-btn u-btn-submit u-button-style">Valider</button>
+              <input  type="submit" value="Valider" class="u-form-control-hidden">
             
-            <div class="u-form-send-message u-form-send-success">Partie crée avec succès !</div>
-            <div class="u-form-send-error u-form-send-message">La partie n'a pas pu être crée ! Veuillez vérifier les informations saisies !</div>
-            <input type="hidden" value="" name="recaptchaResponse">
-            <input type="hidden" name="formServices" value="b9b5ccfdd62dc558942347e9aed74e8c">
+          
           </form>
         </div>
       </div>

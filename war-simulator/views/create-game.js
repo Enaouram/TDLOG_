@@ -2,7 +2,7 @@
 // Constante où on stock le host du serveur contenant l'api (http://localhost:5000)
 const host = window.location.protocol + "//" + window.location.host;
 // url complète de l'api create-game
-const url = host + "/create-game";
+const url = host + "/Créer-une-partie";
 // Au chargement de la page, on ajoute un listener au formulaire create-game-form,
 // à la soumission la fonction create_game(event) sera appelée
 window.onload = function () {
@@ -32,7 +32,7 @@ async function create_game(event) {
     resultCreateGame.appendChild(h1)
     if (!response.ok) {
         // le await est ajouté ici parceque response est un objet qu'on recevra plutard en
-        asynchrone
+        //asynchrone
         const error = await response.json();
         console.log(error)
         h1.innerHTML = "Erreur: " + error.message;
